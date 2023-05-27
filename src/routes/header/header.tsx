@@ -4,7 +4,7 @@ import CatIcon from "../../components/icons/cat-icon";
 
 const Header = () => {
   return (
-    <div>
+    <div className="header">
       <CatIcon />
       <Outlet />
     </div>

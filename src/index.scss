@@ -1,0 +1,27 @@
+body {
+  margin-top: 36px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Montserrat", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  /*colors*/
+  --cat-wiki-black-pearl: #050709;
+  --cat-wiki-white: #ffffff;
+  --cat-wiki-white-smoke: #f2f2f2;
+  --cat-wiki-light-gray-orange: #e3e1dc;
+  --cat-wiki-gray74: #bdbdbd;
+  --cat-wiki-gray60: #999999;
+  --cat-wiki-zinnwaldite-brown: #291507;
+  --cat-wiki-spanish-gray: rgba(151, 151, 151, 0.1);
+  /*font-size*/
+  --cat-wiki-font-size-x-small: 16px;
+  --cat-wiki-font-size-small: 18px;
+  --cat-wiki-font-size-medium: 24px;
+  --cat-wiki-font-size-large: 36px;
+  --cat-wiki-font-size-x-large: 48px;
+}

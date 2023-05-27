@@ -1,0 +1,84 @@
+.home {
+  margin-top: 30px;
+  .search-section {
+    background-color: var(--cat-wiki-black-pearl);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 25px 25px 0px 0px;
+    height: 550px;
+    position: relative;
+    .search-section-body {
+      margin-left: 75px;
+      position: absolute;
+      z-index: 5;
+      width: 30%;
+      p {
+        color: var(--cat-wiki-white);
+        font-size: var(--cat-wiki-font-size-medium);
+        margin-top: 0;
+        margin-bottom: 50px;
+        line-height: 29px;
+        font-weight: 500;
+      }
+      .search-suggestions-container {
+        padding: 10px;
+        margin-top: 16px;
+        background-color: var(--cat-wiki-white);
+        border-radius: 24px;
+        position: absolute;
+        width: 96%;
+        .search-suggestions {
+          padding-top: 10px;
+          padding-bottom: 20px;
+          padding-left: 10px;
+          max-height: 219px;
+          overflow-y: auto;
+          margin: auto;
+          .suggestions-item {
+            font-weight: 500;
+            height: 56px;
+            width: 95%;
+            display: flex;
+            padding-left: 10px;
+            align-items: center;
+            font-size: var(--cat-wiki-font-size-small);
+            border-radius: 12px;
+            cursor: pointer;
+            &:hover {
+              background-color: var(--cat-wiki-spanish-gray);
+            }
+          }
+          &::-webkit-scrollbar {
+            width: 4px;
+            height: 200px;
+            position: absolute;
+            right: 0;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: var(--cat-wiki-white-smoke);
+            border-radius: 24px;
+          }
+          &::-webkit-scrollbar-thumb {
+            background-color: var(--cat-wiki-gray74);
+            border-radius: 24px;
+          }
+          &::-webkit-scrollbar-thumb:hover {
+            background: var(--cat-wiki-gray60);
+          }
+        }
+      }
+    }
+    .search-section-image {
+      height: 100%;
+      display: flex;
+      position: absolute;
+      right: 0;
+      img {
+        border-radius: 25px 25px 0px 0px;
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.input-container {
+  position: relative;
+  .input {
+    border-radius: 50px;
+    border: none;
+    font-size: var(--cat-wiki-font-size-small);
+    padding-left: 28px;
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+
+  svg {
+    right: 1%;
+    margin: auto 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

@@ -1,8 +1,10 @@
 import { FC } from "react";
 import Icon from "./icon";
 
-const CatIcon = () => {
-  return <Icon name="CatwikiLogo" />;
+import { IconProps } from "./icon";
+
+const CatIcon: FC<IconProps> = ({ ...IconProps }) => {
+  return <Icon name="CatwikiLogo" {...IconProps} />;
 };
 
 export default CatIcon;
