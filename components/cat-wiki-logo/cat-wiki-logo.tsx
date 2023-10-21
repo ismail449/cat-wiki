@@ -2,13 +2,19 @@ import React, { FC } from "react";
 
 type CatwikiLogoProps = {
   color?: string;
+  width?: string;
+  height?: string;
 };
 
-const CatwikiLogo: FC<CatwikiLogoProps> = ({ color = "#291507" }) => {
+const CatwikiLogo: FC<CatwikiLogoProps> = ({
+  color = "#291507",
+  width = "128",
+  height = "43",
+}) => {
   return (
     <svg
-      width="128"
-      height="43"
+      width={width}
+      height={height}
       viewBox="0 0 128 43"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

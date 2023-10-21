@@ -1,6 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import CatwikiLogo from "@/components/cat-wiki-logo/cat-wiki-logo";
+import SearchBar from "@/components/search-bar/search-bar";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
@@ -19,7 +19,17 @@ export default function Home() {
         <div className={`${styles.catWikiLogo}`}>
           <CatwikiLogo />
         </div>
-        <section className={`${styles.searchBarSection}`}></section>
+        <section className={`${styles.searchBarSection}`}>
+          <div className={`${styles.searchBarContentContainer}`}>
+            <CatwikiLogo color="white" width="35vmin" height="12vmin" />
+            <h3 className={`${styles.searchBarDescription}`}>
+              Get to know more about your cat breed
+            </h3>
+            <div className={`${styles.searchBarWrapper}`}>
+              <SearchBar placeholder="Enter your breed" />
+            </div>
+          </div>
+        </section>
       </main>
     </>
   );

@@ -39,7 +39,15 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
+  --font-small: 18px;
+  --font-medium: 24px;
+
+  --font-mobile-small: 10px;
+  --font-mobile-medium: 12px;
+
   --black-pearl: #050709;
+  --white: #ffffff;
+  --main-font-color: #291507;
 }
 
 @media (prefers-color-scheme: dark) {

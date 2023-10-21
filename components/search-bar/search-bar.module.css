@@ -1,0 +1,30 @@
+.input {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: none;
+  background-image: url("/magnifying-glass.svg");
+  background-repeat: no-repeat;
+  background-position: right 22px center;
+  padding-left: 28px;
+}
+
+.input,
+.input::placeholder {
+  color: var(--main-font-color);
+  font-size: var(--font-small);
+  font-weight: 500;
+}
+
+@media (max-width: 1024px) {
+  .input {
+    background-size: 13px;
+    background-position: right 7px center;
+    padding-left: 13px;
+  }
+  .input,
+  .input::placeholder {
+    color: var(--main-font-color);
+    font-size: var(--font-mobile-medium);
+  }
+}
