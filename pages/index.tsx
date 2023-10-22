@@ -1,9 +1,36 @@
+import { ChangeEvent, useState, useEffect } from "react";
 import Head from "next/head";
 import CatwikiLogo from "@/components/cat-wiki-logo/cat-wiki-logo";
 import SearchBar from "@/components/search-bar/search-bar";
 import styles from "@/styles/Home.module.css";
 
 export default function Home() {
+  const [breedName, setBreedName] = useState("");
+  const [searchResults, setSearchResults] = useState<
+    { name: string; id: string }[]
+  >([]);
+
+  useEffect(() => {
+    const debouncedFn = setTimeout(() => {
+      handleBreedSearch(breedName);
+    }, 600);
+    return () => clearTimeout(debouncedFn);
+  }, [breedName]);
+
+  const handleBreedSearch = async (breedName: string) => {
+    if (!breedName.trim()) {
+      setSearchResults([]);
+      return;
+    }
+    const response = await fetch(`/api/search-breeds/${breedName}`);
+    const data = await response.json();
+    setSearchResults(data);
+  };
+
+  const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setBreedName(e.target.value);
+  };
+
   return (
     <>
       <Head>
@@ -26,7 +53,15 @@ export default function Home() {
               Get to know more about your cat breed
             </h3>
             <div className={`${styles.searchBarWrapper}`}>
-              <SearchBar placeholder="Enter your breed" />
+              <SearchBar
+                onChange={handleSearchChange}
+                placeholder="Enter your breed"
+              />
+              <ul className={`${styles.searchResultsContainer}`}>
+                {searchResults.map((breed) => {
+                  return <li key={breed.id}>{breed.name}</li>;
+                })}
+              </ul>
             </div>
           </div>
         </section>

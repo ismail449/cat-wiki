@@ -35,6 +35,15 @@
   height: 60px;
 }
 
+.searchResultsContainer {
+  background-color: var(--white);
+  color: var(--black);
+  list-style: none;
+  margin-top: 16px;
+  border-radius: 10px;
+  max-height: 200px;
+}
+
 @media (max-width: 1024px) {
   .searchBarSection {
     background-size: cover;
