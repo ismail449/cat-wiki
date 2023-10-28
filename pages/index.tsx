@@ -57,11 +57,20 @@ export default function Home() {
                 onChange={handleSearchChange}
                 placeholder="Enter your breed"
               />
-              <ul className={`${styles.searchResultsContainer}`}>
-                {searchResults.map((breed) => {
-                  return <li key={breed.id}>{breed.name}</li>;
-                })}
-              </ul>
+              <div className={`${styles.searchResultsContainer}`}>
+                <ul className={`${styles.searchResults}`}>
+                  {searchResults.map((breed) => {
+                    return (
+                      <li
+                        className={`${styles.searchResultItem}`}
+                        key={breed.id}
+                      >
+                        {breed.name}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
           </div>
         </section>
