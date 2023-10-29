@@ -1,0 +1,36 @@
+.searchModal {
+  width: 100%;
+  z-index: 5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: white;
+}
+
+.searchModalContainer {
+  margin: 0 18px;
+}
+
+.closeModal {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  background: var(--gray-background);
+  font-size: var(--font-medium);
+  position: absolute;
+  top: 7px;
+  right: 18px;
+  display: flex;
+  justify-content: center;
+  padding-top: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.searchBar {
+  height: 45px;
+  margin: 77px auto 30px;
+}

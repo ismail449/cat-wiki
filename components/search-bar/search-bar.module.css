@@ -8,7 +8,9 @@
   background-position: right 22px center;
   padding-left: 28px;
 }
-
+.border {
+  border: solid 1px black !important;
+}
 .input,
 .input::placeholder {
   color: var(--main-font-color);
