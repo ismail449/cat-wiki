@@ -1,8 +1,7 @@
 .searchResultsContainer {
   padding: 13px 11px;
   margin-top: 16px;
-  position: absolute;
-  width: 395px;
+  width: 100%;
   background-color: var(--white);
   border-radius: 27px;
   font-size: var(--font-small);
