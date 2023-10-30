@@ -6,12 +6,14 @@ import styles from "@/styles/Home.module.css";
 import SearchModal from "@/components/search-modal/search-modal";
 import SearchResults from "@/components/search-results-list/search-results-list";
 import useBreedSearch from "@/hooks/useBreedSearch";
+import useDidClickOutside from "@/hooks/useDidClickOutside";
 
 export default function Home() {
   const [breedName, setBreedName] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const searchResults = useBreedSearch(breedName);
+  const { didClickOutside, ref } = useDidClickOutside();
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setBreedName(e.target.value);
@@ -43,13 +45,15 @@ export default function Home() {
             <h3 className={`${styles.searchBarDescription}`}>
               Get to know more about your cat breed
             </h3>
-            <div className={`${styles.searchBarWrapper}`}>
+            <div ref={ref} className={`${styles.searchBarWrapper}`}>
               <SearchBar
                 onChange={handleSearchChange}
                 placeholder="Enter your breed"
                 onClick={handleSearchBarClick}
               />
-              <SearchResults searchResults={searchResults} />
+              {!didClickOutside && (
+                <SearchResults searchResults={searchResults} />
+              )}
             </div>
           </div>
         </section>
