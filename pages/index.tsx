@@ -9,11 +9,17 @@ import useBreedSearch from "@/hooks/useBreedSearch";
 
 export default function Home() {
   const [breedName, setBreedName] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const searchResults = useBreedSearch(breedName);
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
     setBreedName(e.target.value);
+  };
+
+  const handleSearchBarClick = () => {
+    if (window.innerWidth > 1024) return;
+    setIsModalOpen(true);
   };
 
   return (
@@ -41,12 +47,16 @@ export default function Home() {
               <SearchBar
                 onChange={handleSearchChange}
                 placeholder="Enter your breed"
+                onClick={handleSearchBarClick}
               />
               <SearchResults searchResults={searchResults} />
             </div>
           </div>
         </section>
-        <SearchModal />
+        <SearchModal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+        />
       </main>
     </>
   );
