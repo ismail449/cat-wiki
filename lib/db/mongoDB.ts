@@ -9,11 +9,10 @@ export const client = new MongoClient(uri, {
   },
 });
 
+export const dbName = "cat_wiki";
+export const collectionName = "cat-breeds";
+
 export type Breed = {
   id: string;
   name: string;
-};
-export type BreedCount = {
-  id: string;
-  searchCount: number;
 };
