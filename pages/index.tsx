@@ -1,4 +1,4 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import Head from "next/head";
 import CatwikiLogo from "@/components/cat-wiki-logo/cat-wiki-logo";
 import SearchBar from "@/components/search-bar/search-bar";
@@ -7,9 +7,12 @@ import SearchModal from "@/components/search-modal/search-modal";
 import SearchResults from "@/components/search-results-list/search-results-list";
 import useBreedSearch from "@/hooks/useBreedSearch";
 import useDidClickOutside from "@/hooks/useDidClickOutside";
+import { getTopTenSearchedBreeds } from "@/lib/cat-breed";
+import { Breed } from "@/lib/db/mongoDB";
 
 export default function Home() {
   const [breedName, setBreedName] = useState("");
+  const [topTenSearchedBreeds, setTopTenSearchedBreeds] = useState<Breed[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const searchResults = useBreedSearch(breedName);
@@ -24,6 +27,14 @@ export default function Home() {
     setIsModalOpen(true);
   };
 
+  useEffect(() => {
+    const getMostSearchedBreeds = async () => {
+      const mostSearchedBreeds = await getTopTenSearchedBreeds();
+      console.log({ mostSearchedBreeds });
+      setTopTenSearchedBreeds(mostSearchedBreeds);
+    };
+    getMostSearchedBreeds();
+  }, []);
   return (
     <>
       <Head>
