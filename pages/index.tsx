@@ -1,4 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react";
+import type { InferGetStaticPropsType, GetStaticProps } from "next";
 import Head from "next/head";
 import CatwikiLogo from "@/components/cat-wiki-logo/cat-wiki-logo";
 import SearchBar from "@/components/search-bar/search-bar";
@@ -8,12 +9,15 @@ import SearchResults from "@/components/search-results-list/search-results-list"
 import useBreedSearch from "@/hooks/useBreedSearch";
 import useDidClickOutside from "@/hooks/useDidClickOutside";
 import { getTopTenSearchedBreeds } from "@/lib/cat-breed";
-import { Breed } from "@/lib/db/mongoDB";
+import { BreedCount } from "@/lib/db/mongoDB";
 
-export default function Home() {
+export default function Home({
+  topTenSearchedBreeds,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   const [breedName, setBreedName] = useState("");
-  const [topTenSearchedBreeds, setTopTenSearchedBreeds] = useState<Breed[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  console.log({ topTenSearchedBreeds });
 
   const searchResults = useBreedSearch(breedName);
   const { didClickOutside, ref } = useDidClickOutside();
@@ -27,14 +31,6 @@ export default function Home() {
     setIsModalOpen(true);
   };
 
-  useEffect(() => {
-    const getMostSearchedBreeds = async () => {
-      const mostSearchedBreeds = await getTopTenSearchedBreeds();
-      console.log({ mostSearchedBreeds });
-      setTopTenSearchedBreeds(mostSearchedBreeds);
-    };
-    getMostSearchedBreeds();
-  }, []);
   return (
     <>
       <Head>
@@ -85,3 +81,14 @@ export default function Home() {
     </>
   );
 }
+
+export const getStaticProps = (async () => {
+  const topTenSearchedBreeds = await getTopTenSearchedBreeds();
+
+  return {
+    props: { topTenSearchedBreeds },
+    revalidate: 10,
+  };
+}) satisfies GetStaticProps<{
+  topTenSearchedBreeds: BreedCount[];
+}>;
