@@ -57,6 +57,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className={styles.discoverBreeds}>
+          <div className={styles.discoverBreedsContainer}>
+            <p>Most Searched Breeds</p>
+            <div className={styles.underLine} />
+            <h2 className={styles.discoverBreedsInfo}>
+              66+ Breeds For you to discover
+            </h2>
+          </div>
+        </section>
         <SearchModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}

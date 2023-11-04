@@ -35,6 +35,31 @@
   height: 60px;
 }
 
+.discoverBreeds {
+  background-color: var(--discover-breeds-background);
+  font-size: var(--font-small);
+  border-radius: 0px 0px 30px 30px;
+}
+.discoverBreedsContainer {
+  width: 82%;
+  margin: 0 auto;
+  padding: 40px 0 98px 0;
+}
+
+.underLine {
+  margin-top: 8px;
+  width: 60px;
+  height: 3px;
+  background-color: var(--main-font-color);
+}
+
+.discoverBreedsInfo {
+  font-size: var(--font-large);
+  font-weight: 700;
+  margin-top: 36px;
+  width: 65%;
+}
+
 @media (max-width: 1024px) {
   .searchBarSection {
     background-size: cover;
@@ -50,5 +75,23 @@
   .searchBarWrapper {
     width: 91px;
     height: 30px;
+  }
+  .discoverBreeds {
+    font-size: var(--font-mobile-medium);
+  }
+  .discoverBreedsContainer {
+    padding: 18px 0 53px 0;
+  }
+  .underLine {
+    margin-top: 6px;
+    width: 40px;
+    height: 3px;
+    background-color: var(--main-font-color);
+  }
+
+  .discoverBreedsInfo {
+    font-size: var(--font-small);
+    margin-top: 17px;
+    width: 65%;
   }
 }
