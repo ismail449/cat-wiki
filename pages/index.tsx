@@ -5,6 +5,8 @@ import CatwikiLogo from "@/components/cat-wiki-logo/cat-wiki-logo";
 import SearchBar from "@/components/search-bar/search-bar";
 import styles from "@/styles/Home.module.css";
 import SearchModal from "@/components/search-modal/search-modal";
+import Card from "@/components/card/card";
+import TopSearchedBreedsSection from "@/components/top-searched-breeds-section/top-searched-breeds-section";
 import SearchResults from "@/components/search-results-list/search-results-list";
 import useBreedSearch from "@/hooks/useBreedSearch";
 import useDidClickOutside from "@/hooks/useDidClickOutside";
@@ -71,6 +73,9 @@ export default function Home({
             <h2 className={styles.discoverBreedsInfo}>
               66+ Breeds For you to discover
             </h2>
+            <TopSearchedBreedsSection
+              topSearchedBreeds={topTenSearchedBreeds}
+            />
           </div>
         </section>
         <SearchModal

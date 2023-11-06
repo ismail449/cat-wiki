@@ -1,0 +1,23 @@
+.topSearchedBreeds {
+  display: flex;
+  flex-direction: row;
+  gap: 51px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.topSearchedBreeds::-webkit-scrollbar {
+  height: 4px;
+}
+
+.topSearchedBreeds::-webkit-scrollbar-track {
+  border-radius: 24px;
+  background-color: var(--gray-95);
+  margin-right: 10px;
+}
+.topSearchedBreeds::-webkit-scrollbar-thumb {
+  background: var(--gray-74);
+  border-radius: 24px;
+}
+.topSearchedBreeds::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-48);
+}
