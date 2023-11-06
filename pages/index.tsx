@@ -73,9 +73,11 @@ export default function Home({
             <h2 className={styles.discoverBreedsInfo}>
               66+ Breeds For you to discover
             </h2>
-            <TopSearchedBreedsSection
-              topSearchedBreeds={topTenSearchedBreeds}
-            />
+            <div className={styles.topSearchedBreeds}>
+              <TopSearchedBreedsSection
+                topSearchedBreeds={topTenSearchedBreeds}
+              />
+            </div>
           </div>
         </section>
         <SearchModal

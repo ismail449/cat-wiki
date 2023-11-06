@@ -2,8 +2,26 @@
   display: flex;
   flex-direction: row;
   gap: 51px;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: hidden;
+}
+
+div.cardContainer:first-of-type {
+  position: relative;
+  margin-left: 10px;
+}
+
+div.cardContainer:first-of-type::before {
+  content: "";
+
+  position: absolute;
+  background: #dec68b;
+
+  height: 174.62px;
+  top: 10%;
+  left: -10px;
+  width: 46.96px;
+  border-radius: 14px;
 }
 .topSearchedBreeds::-webkit-scrollbar {
   height: 4px;
@@ -20,4 +38,28 @@
 }
 .topSearchedBreeds::-webkit-scrollbar-thumb:hover {
   background: var(--gray-48);
+}
+
+@media (max-width: 1024px) {
+  .topSearchedBreeds {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 13px;
+  }
+  div.cardContainer:first-of-type {
+    position: relative;
+    margin-left: 5px;
+  }
+  div.cardContainer:first-of-type::before {
+    content: "";
+
+    position: absolute;
+    background: #dec68b;
+
+    height: 105.29px;
+    top: 10%;
+    left: -5px;
+    width: 32.21px;
+    border-radius: 14px;
+  }
 }

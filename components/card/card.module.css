@@ -7,3 +7,20 @@
   object-fit: cover;
   border-radius: 24px;
 }
+
+.cardName {
+  margin-top: 20px;
+}
+
+@media (max-width: 1024px) {
+  .imageContainer {
+    width: 130px;
+    height: 130px;
+  }
+  .image {
+    border-radius: 12px;
+  }
+  .cardName {
+    margin-top: 12px;
+  }
+}

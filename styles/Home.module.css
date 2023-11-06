@@ -57,7 +57,11 @@
   font-size: var(--font-large);
   font-weight: 700;
   margin-top: 36px;
-  width: 65%;
+  width: 50%;
+}
+
+.topSearchedBreeds {
+  margin-top: 46px;
 }
 
 @media (max-width: 1024px) {
@@ -92,6 +96,8 @@
   .discoverBreedsInfo {
     font-size: var(--font-small);
     margin-top: 17px;
-    width: 65%;
+  }
+  .topSearchedBreeds {
+    margin-top: 26px;
   }
 }

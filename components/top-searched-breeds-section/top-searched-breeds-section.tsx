@@ -15,7 +15,9 @@ const TopSearchedBreedsSection: FC<TopSearchedBreedsProps> = ({
       {topSearchedBreeds.length > 0 ? (
         topSearchedBreeds.map((breed) => {
           return (
-            <Card key={breed.id} imageUrl={breed.imageUrl} name={breed.name} />
+            <div key={breed.id} className={styles.cardContainer}>
+              <Card imageUrl={breed.imageUrl} name={breed.name} />
+            </div>
           );
         })
       ) : (
