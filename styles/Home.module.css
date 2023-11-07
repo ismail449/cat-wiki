@@ -64,6 +64,68 @@
   margin-top: 46px;
 }
 
+.whyShouldOwenCatSection {
+  width: 82%;
+  margin: 0 auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  display: flex;
+  gap: 46px;
+  align-items: center;
+}
+.images {
+  display: flex;
+  gap: 27px;
+}
+
+.image1Container {
+  width: 195px;
+  height: 293px;
+  position: relative;
+}
+.image2Container {
+  width: 273px;
+  height: 167px;
+  position: relative;
+}
+.image1And2Container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 28px;
+}
+.image3Container {
+  width: 238px;
+  height: 385px;
+  position: relative;
+}
+
+.title {
+  font-size: var(--font-large);
+  font-weight: 700;
+  position: relative;
+}
+
+.title::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  width: 67px;
+  height: 3px;
+  background-color: var(--main-font-color);
+}
+
+.answer {
+  font-size: var(--font-small);
+  margin: 41px 0 43px 0;
+  font-weight: 500;
+}
+.readMore {
+  color: var(--text-links-color);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: var(--font-small);
+}
 @media (max-width: 1024px) {
   .searchBarSection {
     background-size: cover;
@@ -89,8 +151,6 @@
   .underLine {
     margin-top: 6px;
     width: 40px;
-    height: 3px;
-    background-color: var(--main-font-color);
   }
 
   .discoverBreedsInfo {
@@ -99,5 +159,43 @@
   }
   .topSearchedBreeds {
     margin-top: 26px;
+  }
+  .whyShouldOwenCatSection {
+    margin-top: 36px;
+    margin-bottom: 22px;
+    display: flex;
+    gap: 63px;
+    flex-direction: column;
+  }
+  .images {
+    gap: 17px;
+  }
+  .image1Container {
+    width: 123px;
+    height: 184px;
+  }
+  .image2Container {
+    width: 172px;
+    height: 105px;
+  }
+  .image1And2Container {
+    gap: 18px;
+  }
+  .image3Container {
+    width: 150px;
+    height: 242px;
+  }
+  .title {
+    font-size: var(--font-mobile-large);
+  }
+  .title::before {
+    width: 51px;
+  }
+  .answer {
+    margin: 41px 0 27px 0;
+  }
+  .readMore {
+    font-size: var(--font-mobile-medium);
+    margin-bottom: 63px;
   }
 }

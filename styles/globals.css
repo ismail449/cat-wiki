@@ -45,6 +45,7 @@
 
   --font-mobile-small: 10px;
   --font-mobile-medium: 12px;
+  --font-mobile-large: 40px;
 
   --black-pearl: #050709;
   --white: #ffffff;
@@ -55,6 +56,7 @@
   --black: #000000;
   --main-font-color: #291507;
   --discover-breeds-background: #e3e1dc;
+  --text-links-color: rgba(41, 21, 7, 0.6);
 }
 
 @media (prefers-color-scheme: dark) {
