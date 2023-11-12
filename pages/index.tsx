@@ -48,9 +48,6 @@ export default function Home({
         <link rel="icon" href="/devchallenges.png" />
       </Head>
       <main className={`${styles.main}`}>
-        <div className={`${styles.catWikiLogo}`}>
-          <CatwikiLogo />
-        </div>
         <section className={`${styles.searchBarSection}`}>
           <div className={`${styles.searchBarContentContainer}`}>
             <CatwikiLogo color="white" width="35vmin" height="12vmin" />
@@ -113,7 +110,6 @@ export default function Home({
             </div>
           </div>
         </section>
-        <Footer />
         <SearchModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}

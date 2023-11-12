@@ -9,7 +9,7 @@ const Footer = () => {
         <CatwikiLogo color="white" />
         <p className={styles.createdBy}>
           &copy; created by{" "}
-          <a href="https://github.com/ismail449" target="_blank">
+          <a href="https://github.com/ismail449/cat-wiki" target="_blank">
             ismail449
           </a>{" "}
           - devChallenge.io 2021

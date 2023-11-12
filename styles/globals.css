@@ -104,6 +104,13 @@ body {
   color: var(--main-font-color);
 }
 
+body {
+  width: 95%;
+  margin-top: 27px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 a {
   color: inherit;
   text-decoration: none;
