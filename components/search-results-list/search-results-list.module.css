@@ -5,6 +5,8 @@
   background-color: var(--white);
   border-radius: 27px;
   font-size: var(--font-small);
+  position: relative;
+  z-index: 5;
 }
 .searchResults {
   list-style: none;
