@@ -1,0 +1,20 @@
+.footer {
+  background-color: var(--black);
+  border-radius: 30px 30px 0px 0px;
+  height: 100px;
+  color: var(--white);
+  font-size: var(--font-small);
+}
+
+.footerContainer {
+  width: 82%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createdBy a {
+  font-weight: 700;
+}

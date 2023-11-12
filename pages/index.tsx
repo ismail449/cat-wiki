@@ -14,6 +14,7 @@ import useDidClickOutside from "@/hooks/useDidClickOutside";
 import { getTopTenSearchedBreeds } from "@/lib/cat-breed";
 import { BreedCount } from "@/lib/db/mongoDB";
 import Link from "next/link";
+import Footer from "@/components/footer/footer";
 
 export default function Home({
   topTenSearchedBreeds,
@@ -112,6 +113,7 @@ export default function Home({
             </div>
           </div>
         </section>
+        <Footer />
         <SearchModal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
