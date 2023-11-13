@@ -41,7 +41,7 @@ export const getBreedById = async (breedId: string) => {
       `/images/search?breed_ids=${breedId}&limit=${imagesLimit}`
     );
     if (data.length === 0) {
-      return { message: "breed not found" };
+      return "breed not found";
     }
     console.log("data", data);
     await client.connect();
@@ -73,8 +73,11 @@ export const getBreedById = async (breedId: string) => {
     return {
       breedData,
       images: breedImages,
-    };
+    } as Breed;
   } catch (error) {
-    if (error instanceof Error) return { message: error.message };
+    if (error instanceof Error) {
+      console.log(error.message);
+      return "something went wrong";
+    }
   }
 };
