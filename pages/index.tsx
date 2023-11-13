@@ -14,15 +14,12 @@ import useDidClickOutside from "@/hooks/useDidClickOutside";
 import { getTopTenSearchedBreeds } from "@/lib/cat-breed";
 import { BreedCount } from "@/lib/db/mongoDB";
 import Link from "next/link";
-import Footer from "@/components/footer/footer";
 
 export default function Home({
   topTenSearchedBreeds,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const [breedName, setBreedName] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  console.log({ topTenSearchedBreeds });
 
   const searchResults = useBreedSearch(breedName);
   const { didClickOutside, ref } = useDidClickOutside();

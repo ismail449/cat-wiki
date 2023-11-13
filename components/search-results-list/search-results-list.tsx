@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { useRouter } from "next/router";
 import styles from "./search-results-list.module.css";
 
 type SearchResultsProps = {
@@ -7,6 +8,7 @@ type SearchResultsProps = {
 };
 
 const SearchResults: FC<SearchResultsProps> = ({ searchResults, height }) => {
+  const router = useRouter();
   return (
     <>
       {searchResults.length > 0 ? (
@@ -17,7 +19,11 @@ const SearchResults: FC<SearchResultsProps> = ({ searchResults, height }) => {
           >
             {searchResults.map((breed) => {
               return (
-                <li className={`${styles.searchResultItem}`} key={breed.id}>
+                <li
+                  onClick={() => router.push(`/breed-details/${breed.id}`)}
+                  className={`${styles.searchResultItem}`}
+                  key={breed.id}
+                >
                   {breed.name}
                 </li>
               );

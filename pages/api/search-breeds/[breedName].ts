@@ -1,4 +1,4 @@
-import { Breed } from "@/lib/db/mongoDB";
+import { BreedData } from "@/lib/db/mongoDB";
 import { axiosInstance } from "@/lib/axios";
 import type { NextApiRequest, NextApiResponse } from "next";
 
@@ -10,9 +10,8 @@ export default async function handler(
     return res.status(405).json({});
   }
   try {
-    const { data } = await axiosInstance<Breed[]>("/breeds");
+    const { data } = await axiosInstance<BreedData[]>("/breeds");
     const breedName = req.query.breedName as string;
-
     const filteredBreeds = data.filter((breed) => {
       return breed.name
         .toLocaleLowerCase()
