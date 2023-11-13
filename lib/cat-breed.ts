@@ -43,7 +43,6 @@ export const getBreedById = async (breedId: string) => {
     if (data.length === 0) {
       return "breed not found";
     }
-    console.log("data", data);
     await client.connect();
     const db = await client.db(dbName);
     const breedCollection = await db.collection(collectionName);

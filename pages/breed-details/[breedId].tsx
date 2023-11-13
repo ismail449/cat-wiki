@@ -9,7 +9,6 @@ const BreedDetails = ({
   if (typeof breed === "string") {
     return <span>{breed}</span>;
   }
-  breed;
   return <div>{breed.breedData.name}</div>;
 };
 
