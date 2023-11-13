@@ -1,0 +1,27 @@
+.breedDetails {
+  display: flex;
+}
+
+.imageContainer {
+  width: 371px;
+  height: 371px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+div.imageContainer::before {
+  content: "";
+
+  position: absolute;
+  background: #dec68b;
+
+  height: 305px;
+  top: 10%;
+  left: -10px;
+  width: 83px;
+  border-radius: 14px;
+}

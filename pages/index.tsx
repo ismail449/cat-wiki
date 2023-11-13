@@ -1,11 +1,9 @@
 import { ChangeEvent, useState } from "react";
 import type { InferGetStaticPropsType, GetStaticProps } from "next";
 import Image from "next/image";
-
 import Head from "next/head";
 import CatwikiLogo from "@/components/cat-wiki-logo/cat-wiki-logo";
 import SearchBar from "@/components/search-bar/search-bar";
-import styles from "@/styles/Home.module.css";
 import SearchModal from "@/components/search-modal/search-modal";
 import TopSearchedBreedsSection from "@/components/top-searched-breeds-section/top-searched-breeds-section";
 import SearchResults from "@/components/search-results-list/search-results-list";
@@ -14,6 +12,7 @@ import useDidClickOutside from "@/hooks/useDidClickOutside";
 import { getTopTenSearchedBreeds } from "@/lib/cat-breed";
 import { BreedCount } from "@/lib/db/mongoDB";
 import Link from "next/link";
+import styles from "@/styles/home.module.css";
 
 export default function Home({
   topTenSearchedBreeds,

@@ -1,7 +1,9 @@
 import React from "react";
 import { GetServerSideProps, InferGetServerSidePropsType } from "next/types";
+import Image from "next/image";
 import { getBreedById } from "@/lib/cat-breed";
 import { Breed } from "@/lib/db/mongoDB";
+import styles from "@/styles/breed-details.module.css";
 
 const BreedDetails = ({
   breed,
@@ -9,7 +11,20 @@ const BreedDetails = ({
   if (typeof breed === "string") {
     return <span>{breed}</span>;
   }
-  return <div>{breed.breedData.name}</div>;
+  return (
+    <div className={styles.breedDetails}>
+      <div className={styles.imageContainer}>
+        <Image
+          className={styles.image}
+          fill
+          src={breed.images[0].url}
+          alt={breed.breedData.name}
+          priority
+        />
+      </div>
+      <div></div>
+    </div>
+  );
 };
 
 export const getServerSideProps = (async (context) => {
