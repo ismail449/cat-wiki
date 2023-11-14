@@ -18,3 +18,14 @@
 .createdBy a {
   font-weight: 700;
 }
+
+@media (max-width: 1024px) {
+  .footer {
+    font-size: var(--font-mobile-medium);
+  }
+  .footerContainer {
+    flex-direction: column;
+    align-items: unset;
+    justify-content: center;
+  }
+}
