@@ -41,7 +41,6 @@ export default function Home({
           content="Cat-wiki is a site where you can search for different cat breeds"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/devchallenges.png" />
       </Head>
       <main className={`${styles.main}`}>
         <section className={`${styles.searchBarSection}`}>

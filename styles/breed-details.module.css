@@ -1,5 +1,8 @@
 .breedDetails {
+  width: 90%;
+  margin: 0 auto;
   display: flex;
+  gap: 115px;
 }
 
 .imageContainer {
@@ -15,13 +18,33 @@
 
 div.imageContainer::before {
   content: "";
-
   position: absolute;
   background: #dec68b;
-
   height: 305px;
   top: 10%;
   left: -10px;
   width: 83px;
   border-radius: 14px;
+}
+
+.detailsContainer {
+  flex: 1;
+}
+
+.breedDetailsTitle {
+  font-size: var(--font-large);
+  margin-bottom: 25px;
+}
+
+.breedDetailsDescription {
+  font-size: var(--font-small);
+  margin-bottom: 32px;
+}
+
+.breedinfo {
+  font-size: var(--font-x-small);
+  margin-bottom: 32px;
+}
+.breedinfo span {
+  font-weight: 700;
 }

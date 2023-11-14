@@ -45,7 +45,7 @@
 }
 
 .discoverBreedsInfo {
-  font-size: var(--font-large);
+  font-size: var(--font-x-large);
   font-weight: 700;
   margin-top: 36px;
   width: 50%;
@@ -92,7 +92,7 @@
 }
 
 .title {
-  font-size: var(--font-large);
+  font-size: var(--font-x-large);
   font-weight: 700;
   position: relative;
 }
