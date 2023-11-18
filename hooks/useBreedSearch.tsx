@@ -15,7 +15,12 @@ const useBreedSearch = (breedName: string) => {
       setSearchResults([]);
       return;
     }
-    const response = await fetch(`/api/search-breeds/${breedName}`);
+    const response = await fetch(`/api/search-breeds/${breedName}`, {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    });
     const data = await response.json();
     setSearchResults(data);
   };
