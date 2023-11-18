@@ -1,6 +1,9 @@
-.breedDetails {
+.breedContainer {
   width: 90%;
   margin: 0 auto;
+}
+
+.breedDetails {
   display: flex;
   gap: 115px;
 }
@@ -31,7 +34,8 @@ div.imageContainer::before {
   flex: 1;
 }
 
-.breedDetailsTitle {
+.breedDetailsTitle,
+.breedImagesTitle {
   font-size: var(--font-large);
   margin-bottom: 25px;
 }
@@ -55,4 +59,23 @@ div.imageContainer::before {
   font-weight: 700;
   row-gap: 32px;
   margin-bottom: 80px;
+}
+
+.breedImages {
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  column-gap: 23px;
+  row-gap: 53px;
+  margin-bottom: 177px;
+}
+
+.imageItemContainer {
+  position: relative;
+  width: 278px;
+  height: 278px;
+}
+
+.imageItem {
+  border-radius: 24px;
+  object-fit: cover;
 }
