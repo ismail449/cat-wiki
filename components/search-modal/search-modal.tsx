@@ -13,7 +13,7 @@ const SearchModal: FC<SearchModalProps> = ({ isOpen, onClose }) => {
   const [isModalOpen, setIsModalOpen] = useState(isOpen);
   const [breedName, setBreedName] = useState("");
   const modalRef = useRef<HTMLDialogElement>(null);
-  const searchResults = useBreedSearch(breedName);
+  const { searchResults, error, loading } = useBreedSearch(breedName);
 
   useEffect(() => {
     setIsModalOpen(isOpen);
@@ -46,7 +46,12 @@ const SearchModal: FC<SearchModalProps> = ({ isOpen, onClose }) => {
         </span>
         <div className={styles.searchBar}>
           <SearchBar onChange={handleSearchChange} showBorder />
-          <SearchResults height="100vh" searchResults={searchResults} />
+          <SearchResults
+            height="100vh"
+            searchResults={searchResults}
+            error={error}
+            loading={loading}
+          />
         </div>
       </div>
     </dialog>

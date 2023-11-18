@@ -5,10 +5,23 @@ import styles from "./search-results-list.module.css";
 type SearchResultsProps = {
   searchResults: { name: string; id: string }[];
   height?: string;
+  loading?: boolean;
+  error?: string;
 };
 
-const SearchResults: FC<SearchResultsProps> = ({ searchResults, height }) => {
+const SearchResults: FC<SearchResultsProps> = ({
+  searchResults,
+  height,
+  loading,
+  error,
+}) => {
   const router = useRouter();
+  if (loading) {
+    return <div className={`${styles.searchResultsContainer}`}>Loading...</div>;
+  }
+  if (error && error?.length > 0) {
+    return <div className={`${styles.searchResultsContainer}`}>{error}</div>;
+  }
   return (
     <>
       {searchResults.length > 0 ? (

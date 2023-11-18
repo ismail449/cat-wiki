@@ -20,7 +20,7 @@ export default function Home({
   const [breedName, setBreedName] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const searchResults = useBreedSearch(breedName);
+  const { searchResults, loading, error } = useBreedSearch(breedName);
   const { didClickOutside, ref } = useDidClickOutside();
 
   const handleSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -55,9 +55,13 @@ export default function Home({
                 placeholder="Enter your breed"
                 onClick={handleSearchBarClick}
               />
-              {!didClickOutside && (
-                <SearchResults searchResults={searchResults} />
-              )}
+              {!didClickOutside && breedName ? (
+                <SearchResults
+                  searchResults={searchResults}
+                  loading={loading}
+                  error={error}
+                />
+              ) : null}
             </div>
           </div>
         </section>

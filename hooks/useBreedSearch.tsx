@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 const useBreedSearch = (breedName: string) => {
   const [searchResults, setSearchResults] = useState([]);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const debouncedFn = setTimeout(() => {
@@ -11,20 +13,27 @@ const useBreedSearch = (breedName: string) => {
   }, [breedName]);
 
   const handleBreedSearch = async (breedName: string) => {
-    if (!breedName.trim()) {
-      setSearchResults([]);
-      return;
+    try {
+      if (!breedName.trim()) {
+        setSearchResults([]);
+        return;
+      }
+      setLoading(true);
+      const response = await fetch(`/api/search-breeds/${breedName}`, {
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+      });
+      const data = await response.json();
+      setLoading(false);
+      setSearchResults(data);
+    } catch (error) {
+      setError("Something went wrong");
+      setLoading(false);
     }
-    const response = await fetch(`/api/search-breeds/${breedName}`, {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    });
-    const data = await response.json();
-    setSearchResults(data);
   };
-  return searchResults;
+  return { searchResults, error, loading };
 };
 
 export default useBreedSearch;
