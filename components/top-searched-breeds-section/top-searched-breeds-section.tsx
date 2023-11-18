@@ -2,6 +2,7 @@ import { BreedCount } from "@/lib/db/mongoDB";
 import React, { FC } from "react";
 import Card from "../card/card";
 import styles from "./top-searched-breeds-section.module.css";
+import Link from "next/link";
 
 type TopSearchedBreedsProps = {
   topSearchedBreeds: BreedCount[];
@@ -16,7 +17,9 @@ const TopSearchedBreedsSection: FC<TopSearchedBreedsProps> = ({
         topSearchedBreeds.map((breed) => {
           return (
             <div key={breed.id} className={styles.cardContainer}>
-              <Card imageUrl={breed.imageUrl} name={breed.name} />
+              <Link href={`/breed-details/${breed.id}`}>
+                <Card imageUrl={breed.imageUrl} name={breed.name} />
+              </Link>
             </div>
           );
         })
