@@ -45,34 +45,42 @@ const BreedDetails = ({
             <span>Life Span:</span> {breedData.life_span} years
           </p>
           <div className={styles.statsContainer}>
-            <p className={styles.breedinfo}>
-              <span>Adaptability:</span>{" "}
+            <span>Adaptability:</span>
+            <div>
               <Level maxLevel={5} level={breedData.adaptability} />
-            </p>
-            <p className={styles.breedinfo}>
-              <span>Affection level:</span>
+            </div>
+
+            <span>Affection level:</span>
+            <div>
               <Level maxLevel={5} level={breedData.affection_level} />
-            </p>
-            <p className={styles.breedinfo}>
-              <span>Child Friendly:</span>
+            </div>
+            <span>Child Friendly:</span>
+            <div>
               <Level maxLevel={5} level={breedData.child_friendly} />
-            </p>
-            <p className={styles.breedinfo}>
-              <span>Grooming:</span>
+            </div>
+            <span>Grooming:</span>
+            <div>
               <Level maxLevel={5} level={breedData.grooming} />
-            </p>
-            <p className={styles.breedinfo}>
-              <span>Intelligence:</span> {breedData.intelligence}
-            </p>
-            <p className={styles.breedinfo}>
-              <span>Health issues:</span> {breedData.health_issues}
-            </p>
-            <p className={styles.breedinfo}>
-              <span>Social needs:</span> {breedData.social_needs}
-            </p>
-            <p className={styles.breedinfo}>
-              <span>Stranger friendly:</span> {breedData.stranger_friendly}
-            </p>
+            </div>
+            <span>Intelligence:</span>
+            <div>
+              <Level maxLevel={5} level={breedData.intelligence} />
+            </div>
+
+            <span>Health issues:</span>
+            <div>
+              <Level maxLevel={5} level={breedData.health_issues} />
+            </div>
+
+            <span>Social needs:</span>
+            <div>
+              <Level maxLevel={5} level={breedData.social_needs} />
+            </div>
+
+            <span>Stranger friendly:</span>
+            <div>
+              <Level maxLevel={5} level={breedData.stranger_friendly} />
+            </div>
           </div>
         </div>
       </div>

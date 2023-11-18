@@ -48,3 +48,11 @@ div.imageContainer::before {
 .breedinfo span {
   font-weight: 700;
 }
+
+.statsContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  font-weight: 700;
+  row-gap: 32px;
+  margin-bottom: 80px;
+}
