@@ -26,6 +26,9 @@ const useBreedSearch = (breedName: string) => {
         },
       });
       const data = await response.json();
+      if (data.message) {
+        console.log(data.message);
+      }
       setLoading(false);
       setSearchResults(data);
     } catch (error) {
