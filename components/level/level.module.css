@@ -1,0 +1,12 @@
+.levelItem {
+  display: inline-block;
+  width: 60px;
+  height: 12px;
+  border-radius: 8px;
+  background-color: var(--gray-88);
+  margin-left: 8px;
+}
+
+.filledLevel {
+  background-color: var(--filled-level-background);
+}

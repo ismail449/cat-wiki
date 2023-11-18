@@ -5,6 +5,7 @@ import { getBreedById } from "@/lib/cat-breed";
 import { Breed } from "@/lib/db/mongoDB";
 import styles from "@/styles/breed-details.module.css";
 import Head from "next/head";
+import Level from "@/components/level/level";
 
 const BreedDetails = ({
   breed,
@@ -43,6 +44,36 @@ const BreedDetails = ({
           <p className={styles.breedinfo}>
             <span>Life Span:</span> {breedData.life_span} years
           </p>
+          <div className={styles.statsContainer}>
+            <p className={styles.breedinfo}>
+              <span>Adaptability:</span>{" "}
+              <Level maxLevel={5} level={breedData.adaptability} />
+            </p>
+            <p className={styles.breedinfo}>
+              <span>Affection level:</span>
+              <Level maxLevel={5} level={breedData.affection_level} />
+            </p>
+            <p className={styles.breedinfo}>
+              <span>Child Friendly:</span>
+              <Level maxLevel={5} level={breedData.child_friendly} />
+            </p>
+            <p className={styles.breedinfo}>
+              <span>Grooming:</span>
+              <Level maxLevel={5} level={breedData.grooming} />
+            </p>
+            <p className={styles.breedinfo}>
+              <span>Intelligence:</span> {breedData.intelligence}
+            </p>
+            <p className={styles.breedinfo}>
+              <span>Health issues:</span> {breedData.health_issues}
+            </p>
+            <p className={styles.breedinfo}>
+              <span>Social needs:</span> {breedData.social_needs}
+            </p>
+            <p className={styles.breedinfo}>
+              <span>Stranger friendly:</span> {breedData.stranger_friendly}
+            </p>
+          </div>
         </div>
       </div>
     </>

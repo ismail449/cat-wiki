@@ -52,11 +52,13 @@
   --black-pearl: #050709;
   --white: #ffffff;
   --gray-95: #f2f2f2;
+  --gray-88: #e0e0e0;
   --gray-74: #bdbdbd;
   --gray-48: #7a7a7a;
   --gray-background: rgba(151, 151, 151, 0.1);
   --black: #000000;
   --main-font-color: #291507;
+  --filled-level-background: #544439;
   --discover-breeds-background: #e3e1dc;
   --text-links-color: rgba(41, 21, 7, 0.6);
 }
