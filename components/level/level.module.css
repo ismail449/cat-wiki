@@ -10,3 +10,11 @@
 .filledLevel {
   background-color: var(--filled-level-background);
 }
+
+@media (max-width: 1060px) {
+  .levelItem {
+    width: 28px;
+    height: 6px;
+    margin-left: 3px;
+  }
+}

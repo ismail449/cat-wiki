@@ -25,7 +25,7 @@ const BreedDetails = ({
             <Image
               className={styles.image}
               fill
-              sizes="(max-width: 1024px) 100%"
+              sizes="(max-width: 1024px) 250px"
               src={images[0].url}
               alt={breedData.name}
               priority
@@ -94,6 +94,7 @@ const BreedDetails = ({
                   className={styles.imageItem}
                   src={url}
                   fill
+                  sizes="(max-width: 1024px) 250px"
                   alt={`${breedData.name}-${index}`}
                 />
               </div>
