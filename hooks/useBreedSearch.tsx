@@ -26,10 +26,12 @@ const useBreedSearch = (breedName: string) => {
         },
       });
       const data = await response.json();
+      setLoading(false);
       if (data.message) {
         console.log(data.message);
+        setError("Something went wrong");
+        return;
       }
-      setLoading(false);
       setSearchResults(data);
     } catch (error) {
       setError("Something went wrong");
