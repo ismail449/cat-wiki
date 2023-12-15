@@ -12,7 +12,7 @@ import useDidClickOutside from "@/hooks/useDidClickOutside";
 import { getTopTenSearchedBreeds } from "@/lib/cat-breed";
 import { BreedCount } from "@/lib/db/mongoDB";
 import Link from "next/link";
-import styles from "@/styles/home.module.css";
+import styles from "@/styles/Home.module.css";
 
 export default function Home({
   topTenSearchedBreeds,
@@ -69,9 +69,13 @@ export default function Home({
           <div className={styles.discoverBreedsContainer}>
             <p>Most Searched Breeds</p>
             <div className={styles.underLine} />
-            <h2 className={styles.discoverBreedsInfo}>
-              66+ Breeds For you to discover
-            </h2>
+            <div className={styles.discoverBreedsInfoContainer}>
+              <h2 className={styles.discoverBreedsInfo}>
+                66+ Breeds For you to discover
+              </h2>
+              <Link href="/top-ten-breeds" className={styles.readMore} >SEE MORE →</Link>
+            </div>
+
             <div className={styles.topSearchedBreeds}>
               <TopSearchedBreedsSection
                 topSearchedBreeds={topTenSearchedBreeds}

@@ -27,6 +27,7 @@ export const getTopTenSearchedBreeds = async (): Promise<BreedCount[]> => {
         name: breed.breedData.name,
         imageUrl: breed.images[0].url,
         searchCount: breed.searchCount,
+        description: breed.breedData.description
       };
     });
   } catch (error) {

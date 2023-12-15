@@ -121,9 +121,3 @@ a {
   text-decoration: none;
   cursor: url("/images/funny-cats-jumping-cat-pointer.png"), auto;
 }
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-}

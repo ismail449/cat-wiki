@@ -31,6 +31,7 @@
   font-size: var(--font-small);
   border-radius: 0px 0px 30px 30px;
 }
+
 .discoverBreedsContainer {
   width: 82%;
   margin: 0 auto;
@@ -51,6 +52,12 @@
   width: 50%;
 }
 
+.discoverBreedsInfoContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
 .topSearchedBreeds {
   margin-top: 46px;
 }
@@ -64,6 +71,7 @@
   gap: 46px;
   align-items: center;
 }
+
 .images {
   display: flex;
   gap: 27px;
@@ -74,17 +82,20 @@
   height: 293px;
   position: relative;
 }
+
 .image2Container {
   width: 273px;
   height: 167px;
   position: relative;
 }
+
 .image1And2Container {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 28px;
 }
+
 .image3Container {
   width: 238px;
   height: 385px;
@@ -111,34 +122,42 @@
   margin: 41px 0 43px 0;
   font-weight: 500;
 }
+
 .readMore {
   color: var(--text-links-color);
   font-weight: 700;
   cursor: url("/images/funny-cats-jumping-cat-pointer.png"), auto;
   font-size: var(--font-small);
 }
+
 @media (max-width: 1024px) {
   .searchBarSection {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
   .searchBarContentContainer {
     padding-top: 22px;
     padding-left: 29px;
   }
+
   .searchBarDescription {
     font-size: var(--font-mobile-small);
   }
+
   .searchBarWrapper {
     width: 91px;
     height: 30px;
   }
+
   .discoverBreeds {
     font-size: var(--font-mobile-medium);
   }
+
   .discoverBreedsContainer {
     padding: 18px 0 53px 0;
   }
+
   .underLine {
     margin-top: 6px;
     width: 40px;
@@ -148,9 +167,11 @@
     font-size: var(--font-small);
     margin-top: 17px;
   }
+
   .topSearchedBreeds {
     margin-top: 26px;
   }
+
   .whyShouldOwenCatSection {
     margin-top: 36px;
     margin-bottom: 22px;
@@ -158,33 +179,42 @@
     gap: 63px;
     flex-direction: column;
   }
+
   .images {
     gap: 17px;
   }
+
   .image1Container {
     width: 123px;
     height: 184px;
   }
+
   .image2Container {
     width: 172px;
     height: 105px;
   }
+
   .image1And2Container {
     gap: 18px;
   }
+
   .image3Container {
     width: 150px;
     height: 242px;
   }
+
   .title {
     font-size: var(--font-mobile-large);
   }
+
   .title::before {
     width: 51px;
   }
+
   .answer {
     margin: 41px 0 27px 0;
   }
+
   .readMore {
     font-size: var(--font-mobile-medium);
     margin-bottom: 63px;

@@ -17,6 +17,7 @@ export type BreedCount = {
   name: string;
   imageUrl: string;
   searchCount: number;
+  description: string
 };
 export interface Breed {
   _id: string;
