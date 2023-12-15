@@ -16,16 +16,27 @@ const TopTenbreeds = ({
       <Head>
         <title>Top 10 most searched breeds</title>
       </Head>
-      <div>
+      <div className={styles.topTenBreeds}>
         <h1 className={styles.topTenBreedsHeader}>
           Top 10 most searched breeds
         </h1>
-        <Card
-          imageUrl={breed.imageUrl}
-          name={breed.name}
-          description={breed.description}
-          index={1}
-        />
+        <div className={styles.breesList}>
+          {topTenSearchedBreeds.length > 0 ? (
+            topTenSearchedBreeds.map((breed, index) => {
+              return (
+                <Card
+                  key={breed.id}
+                  imageUrl={breed.imageUrl}
+                  name={breed.name}
+                  description={breed.description}
+                  index={index + 1}
+                />
+              );
+            })
+          ) : (
+            <span>Something went wrong</span>
+          )}
+        </div>
       </div>
     </>
   );

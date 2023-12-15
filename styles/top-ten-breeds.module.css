@@ -1,5 +1,14 @@
+.topTenBreeds{
+    margin-bottom: 107px;
+}
+
 .topTenBreedsHeader{
     font-size: var(--font-large);
     font-weight: 700;
     margin-bottom: 53px;
+}
+.breesList{
+    display: flex;
+    flex-direction: column;
+    gap: 55px; 
 }

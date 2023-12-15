@@ -22,7 +22,7 @@
 }
 
 .descriptionContainer{
-  width: 53%;
+  flex: 1;
 }
 
 .description{
@@ -51,9 +51,6 @@
   .cardContainer{
     flex-direction: column;
     gap: 10px;
-  }
-  .descriptionContainer{
-    width: 95%;
   }
   .descriptionName{
     font-size: var(--font-mobile-large);
