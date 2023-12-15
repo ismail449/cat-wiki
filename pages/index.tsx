@@ -90,8 +90,9 @@ export default function Home({
             <Link
               href="https://www.helpguide.org/articles/healthy-living/joys-of-owning-a-cat.htm"
               target="_blank"
+              className={styles.readMore}
             >
-              <span className={styles.readMore}>READ MORE →</span>
+              READ MORE →
             </Link>
           </div>
           <div className={styles.images}>

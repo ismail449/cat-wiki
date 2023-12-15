@@ -113,11 +113,13 @@ body {
   margin-top: 27px;
   margin-right: auto;
   margin-left: auto;
+  cursor: url("/images/funny-cats-jumping-cat-cursor.png"), auto;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+  cursor: url("/images/funny-cats-jumping-cat-pointer.png"), auto;
 }
 
 @media (prefers-color-scheme: dark) {

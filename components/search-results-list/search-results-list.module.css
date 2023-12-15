@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   border-radius: 12px;
-  cursor: pointer;
+  cursor: url("/images/funny-cats-jumping-cat-pointer.png"), auto;
 }
 .searchResultItem:hover {
   background-color: var(--gray-background);

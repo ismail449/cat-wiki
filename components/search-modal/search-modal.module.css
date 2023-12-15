@@ -22,7 +22,7 @@
   display: flex;
   justify-content: center;
   padding-top: 4px;
-  cursor: pointer;
+  cursor: url("/images/funny-cats-jumping-cat-pointer.png"), auto;  
   user-select: none;
 }
 
