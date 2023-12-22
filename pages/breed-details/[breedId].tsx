@@ -28,7 +28,7 @@ const BreedDetails = ({
               sizes="(max-width: 1024px) 250px"
               src={images[0].url}
               alt={breedData.name}
-              priority
+              loading="lazy"
             />
           </div>
           <div className={styles.detailsContainer}>
@@ -96,6 +96,7 @@ const BreedDetails = ({
                   fill
                   sizes="(max-width: 1024px) 250px"
                   alt={`${breedData.name}-${index}`}
+                  loading="lazy"
                 />
               </div>
             );
