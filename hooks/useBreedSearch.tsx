@@ -29,12 +29,13 @@ const useBreedSearch = (breedName: string) => {
       setLoading(false);
       if (data.message) {
         console.log(data.message);
-        setError("Something went wrong");
+        setError(data.message);
         return;
       }
+      setError("");
       setSearchResults(data);
     } catch (error) {
-      setError("Something went wrong");
+      setError("Breed not found");
       setLoading(false);
     }
   };
