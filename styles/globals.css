@@ -61,6 +61,7 @@
   --filled-level-background: #544439;
   --discover-breeds-background: #e3e1dc;
   --text-links-color: rgba(41, 21, 7, 0.6);
+  --loading-spinner-background: rgba(255, 255, 255, 0.5);
 }
 
 @media (prefers-color-scheme: dark) {
